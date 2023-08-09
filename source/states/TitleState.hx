@@ -319,7 +319,7 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
+		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('ax_media_logo'));
 		add(ngSpr);
 		ngSpr.visible = false;
 		ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));
@@ -507,22 +507,30 @@ class TitleState extends MusicBeatState
 	{
 		for (i in 0...textArray.length)
 		{
-			var money:Alphabet = new Alphabet(0, 0, textArray[i], true);
-			money.screenCenter(X);
-			money.y += (i * 60) + 200 + offset;
-			if(credGroup != null && textGroup != null) {
-				credGroup.add(money);
-				textGroup.add(money);
+			if(credGroup != null && textGroup != null)
+			{
+				var poopText:FlxText = new FlxText(0, 0, FlxG.width, textArray[i], 75);
+				
+				poopText.setFormat("Bloodsoul", 75, FlxColor.WHITE, CENTER);
+				poopText.screenCenter(X);
+				poopText.y += (i * 60) + 200 + offset;
+				
+				credGroup.add(poopText);
+				textGroup.add(poopText);
 			}
 		}
 	}
 
 	function addMoreText(text:String, ?offset:Float = 0)
 	{
-		if(textGroup != null && credGroup != null) {
-			var coolText:Alphabet = new Alphabet(0, 0, text, true);
+		if(textGroup != null && credGroup != null)
+		{
+			var coolText:FlxText = new FlxText(0, 0, FlxG.width, text, 75);
+
+			coolText.setFormat("Bloodsoul", 75, FlxColor.WHITE, CENTER);
 			coolText.screenCenter(X);
 			coolText.y += (textGroup.length * 60) + 200 + offset;
+
 			credGroup.add(coolText);
 			textGroup.add(coolText);
 		}
@@ -563,19 +571,12 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
-					#if PSYCH_WATERMARKS
-					createCoolText(['Psych Engine by'], 40);
-					#else
-					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
-					#end
+					createCoolText(['CHANGED SE MOD BY:'], 40);
 				// credTextShit.visible = true;
 				case 4:
-					#if PSYCH_WATERMARKS
-					addMoreText('Shadow Mario', 40);
-					addMoreText('Riveren', 40);
-					#else
-					addMoreText('present');
-					#end
+					addMoreText('AAYAM V', 40);
+					addMoreText('DOCTOR AX', 40);
+					addMoreText('PURO TBL', 40);
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
 				case 5:
@@ -584,13 +585,9 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = 'In association \nwith';
 				// credTextShit.screenCenter();
 				case 6:
-					#if PSYCH_WATERMARKS
-					createCoolText(['Not associated', 'with'], -40);
-					#else
-					createCoolText(['In association', 'with'], -40);
-					#end
+					createCoolText(['IN ASSOCIATION', 'WITH'], -40);
 				case 8:
-					addMoreText('newgrounds', -40);
+					addMoreText('AX MEDIA', -40);
 					ngSpr.visible = true;
 				// credTextShit.text += '\nNewgrounds';
 				case 9:
@@ -612,13 +609,13 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 14:
-					addMoreText('Friday');
+					addMoreText('FRIDAY');
 				// credTextShit.visible = true;
 				case 15:
-					addMoreText('Night');
+					addMoreText('NIGHT');
 				// credTextShit.text += '\nNight';
 				case 16:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('CHANGED'); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
