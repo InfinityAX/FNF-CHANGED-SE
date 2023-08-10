@@ -35,6 +35,8 @@ typedef TitleData =
 	starty:Float,
 	gfx:Float,
 	gfy:Float,
+	titleRevealx:Float,
+	titleRevealy:Float,
 	backgroundSprite:String,
 	bpm:Int
 }
@@ -186,6 +188,7 @@ class TitleState extends MusicBeatState
 
 	var logoBl:FlxSprite;
 	var gfDance:FlxSprite;
+	var titleReveal:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 	var swagShader:ColorSwap = null;
@@ -229,6 +232,15 @@ class TitleState extends MusicBeatState
 		gfDance = new FlxSprite(titleJSON.gfx, titleJSON.gfy);
 		gfDance.antialiasing = ClientPrefs.data.antialiasing;
 
+		// Replace flash
+		titleReveal = new FlxSprite(titleJSON.titleRevealx, titleJSON.titleRevealy);
+		titleReveal.frames = Paths.getSparrowAtlas('transition_cool');
+		titleReveal.antialiasing = ClientPrefs.data.antialiasing;
+
+		titleReveal.animation.addByPrefix('gooUp', 'trans', 24, false);
+		titleReveal.animation.play('gooUp');
+		titleReveal.updateHitbox();
+
 		var easterEgg:String = FlxG.save.data.psychDevsEasterEgg;
 		if(easterEgg == null) easterEgg = ''; //html5 fix
 
@@ -265,6 +277,7 @@ class TitleState extends MusicBeatState
 
 		add(gfDance);
 		add(logoBl);
+
 		if(swagShader != null)
 		{
 			gfDance.shader = swagShader.shader;
@@ -296,6 +309,8 @@ class TitleState extends MusicBeatState
 		titleText.updateHitbox();
 		// titleText.screenCenter(X);
 		add(titleText);
+
+		add(titleReveal);
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.antialiasing = ClientPrefs.data.antialiasing;
@@ -650,7 +665,8 @@ class TitleState extends MusicBeatState
 					default: //Go back to normal ugly ass boring GF
 						remove(ngSpr);
 						remove(credGroup);
-						FlxG.camera.flash(FlxColor.WHITE, 2);
+						titleReveal.animation.play('gooUp');
+						//FlxG.camera.flash(FlxColor.WHITE, 2);
 						skippedIntro = true;
 						playJingle = false;
 
@@ -666,7 +682,8 @@ class TitleState extends MusicBeatState
 					{
 						remove(ngSpr);
 						remove(credGroup);
-						FlxG.camera.flash(FlxColor.WHITE, 0.6);
+						titleReveal.animation.play('gooUp');
+						//FlxG.camera.flash(FlxColor.WHITE, 0.6);
 						transitioning = false;
 					});
 				}
@@ -674,8 +691,10 @@ class TitleState extends MusicBeatState
 				{
 					remove(ngSpr);
 					remove(credGroup);
-					FlxG.camera.flash(FlxColor.WHITE, 3);
-					sound.onComplete = function() {
+					titleReveal.animation.play('gooUp');
+					//FlxG.camera.flash(FlxColor.WHITE, 3);
+					sound.onComplete = function()
+					{
 						FlxG.sound.playMusic(Paths.music('freakyMenu'), 0);
 						FlxG.sound.music.fadeIn(4, 0, 0.7);
 						transitioning = false;
@@ -687,7 +706,8 @@ class TitleState extends MusicBeatState
 			{
 				remove(ngSpr);
 				remove(credGroup);
-				FlxG.camera.flash(FlxColor.WHITE, 4);
+				titleReveal.animation.play('gooUp');
+				//FlxG.camera.flash(FlxColor.WHITE, 4);
 
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="transition cool.png">
+	<!-- Created with Adobe Animate version 23.0.2.103 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="trans0000" x="0" y="0" width="1606" height="1107" frameX="0" frameY="-1053" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0001" x="0" y="0" width="1606" height="1107" frameX="0" frameY="-1053" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0002" x="1610" y="0" width="1606" height="1107" frameX="0" frameY="-1053" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0003" x="1610" y="0" width="1606" height="1107" frameX="0" frameY="-1053" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0004" x="3220" y="0" width="1606" height="1109" frameX="0" frameY="-1051" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0005" x="4830" y="0" width="1606" height="1112" frameX="0" frameY="-1048" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0006" x="6440" y="0" width="1606" height="1117" frameX="0" frameY="-1043" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0007" x="0" y="1121" width="1606" height="1125" frameX="0" frameY="-1034" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0008" x="1610" y="1121" width="1606" height="1138" frameX="0" frameY="-1020" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0009" x="3220" y="1121" width="1606" height="1156" frameX="0" frameY="-1000" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0010" x="4830" y="1121" width="1606" height="1180" frameX="0" frameY="-972" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0011" x="6440" y="1121" width="1606" height="1210" frameX="0" frameY="-935" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0012" x="0" y="2335" width="1606" height="1247" frameX="0" frameY="-886" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0013" x="1610" y="2335" width="1606" height="1291" frameX="0" frameY="-823" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0014" x="3220" y="2335" width="1606" height="1343" frameX="0" frameY="-743" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0015" x="4830" y="2335" width="1606" height="1402" frameX="0" frameY="-644" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0016" x="6440" y="2335" width="1606" height="1466" frameX="0" frameY="-524" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0017" x="0" y="3805" width="1606" height="1536" frameX="0" frameY="-378" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0018" x="1610" y="3805" width="1606" height="1608" frameX="0" frameY="-205" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0019" x="3220" y="3805" width="1606" height="1681" frameX="0" frameY="0" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0020" x="4830" y="3805" width="1606" height="1511" frameX="0" frameY="0" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0021" x="6440" y="3805" width="1606" height="1296" frameX="0" frameY="0" frameWidth="1606" frameHeight="2160"/>
+	<SubTexture name="trans0022" x="0" y="5490" width="1606" height="1058" frameX="0" frameY="0" frameWidth="1606" frameHeight="2160"/>
+</TextureAtlas>
