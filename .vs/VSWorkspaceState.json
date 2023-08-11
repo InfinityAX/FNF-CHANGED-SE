@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.github\\ISSUE_TEMPLATE",
     "\\source",
+    "\\source\\options",
     "\\source\\states"
   ],
   "SelectedNode": "\\source\\states\\TitleState.hx",
