@@ -486,9 +486,9 @@ class TitleState extends MusicBeatState
 		{
 			if(credGroup != null && textGroup != null)
 			{
-				var poopText:FlxText = new FlxText(0, 0, FlxG.width, textArray[i], 75);
+				var poopText:FlxText = new FlxText(0, 0, FlxG.width, textArray[i], 60);
 				
-				poopText.setFormat("Bloodsoul", 75, FlxColor.WHITE, CENTER);
+				poopText.setFormat("Rubik Wet Paint Regular", 60, FlxColor.WHITE, CENTER);
 				poopText.screenCenter(X);
 				poopText.y += (i * 60) + 200 + offset;
 				
@@ -502,9 +502,9 @@ class TitleState extends MusicBeatState
 	{
 		if(textGroup != null && credGroup != null)
 		{
-			var coolText:FlxText = new FlxText(0, 0, FlxG.width, text, 75);
+			var coolText:FlxText = new FlxText(0, 0, FlxG.width, text, 60);
 
-			coolText.setFormat("Bloodsoul", 75, FlxColor.WHITE, CENTER);
+			coolText.setFormat("Rubik Wet Paint Regular", 60, FlxColor.WHITE, CENTER);
 			coolText.screenCenter(X);
 			coolText.y += (textGroup.length * 60) + 200 + offset;
 
